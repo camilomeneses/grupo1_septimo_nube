@@ -103,6 +103,38 @@ function domino()
 	}	
 		tabla_mostrar.innerHTML=filas_columnas;
 }
+
+function mostrar()
+{
+	var numero =3;
+	var tabla ="";
+	var filas="";
+	var columnas="";
+	var i=1;
+
+		while(numero<=5)
+		{
+
+			i=1;
+			while(i<=10)
+			{
+
+					var resultado =numero *i;
+					//tabla=tabla+ (numero +"*"+i+"="+resultado+ "<br>");
+					columnas=columnas+ "<td>" + numero +"</td>" +"<td>" + "*" +"</td>" + "<td>" + i +"</td>" + "<td>" + "=" +"</td>"+"<td>" + resultado +"</td>";
+					filas=filas+"<tr>" +columnas+"</tr>";
+
+					columnas="";
+
+					tabla=filas+columnas;
+					i++;
+			}
+
+			numero++;
+		}
+
+document.getElementById('tabla_mostrar').innerHTML=tabla;
+}
 </script>
         
     </div><!--fin div contenedor-->
