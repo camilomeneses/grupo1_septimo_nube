@@ -28,7 +28,44 @@ and open the template in the editor.
     <tr></tr>
     </table>
     </div>   
-        
+       
+        <script type="text/javascript">
+
+
+function domino()
+{
+	var limpiar="";
+	tabla_mostrar.innerHTML=limpiar;
+
+	var filas=20;
+	var columnas=25;
+	var filas_columnas=" ";
+	var tabla_domino=document.getElementById('tabla_mostrar');
+   // var n=1;
+ 
+	for (var i = 0; i <filas; i++)
+	{		
+		var cols=" ";
+		for (var j = 0 ; j < columnas; j++) 
+		{
+			var colorCor=i+j;
+			if(colorCor%2==0)
+			{
+				cols = cols+"<td width='20px' height='20px' >"+"<img src='emoti.png' width='20px' height='20px' >"+
+				"</td>" ;
+				//n=n+1;
+			}
+			else
+			{
+				cols = cols+"<td width='20px' height='20px'><br></td>";
+			}
+		}
+
+		filas_columnas=filas_columnas+"<tr>"+cols+"</tr>";
+	}	
+		tabla_mostrar.innerHTML=filas_columnas;
+}
+</script>
         
     </div><!--fin div contenedor-->
     </body>
